@@ -19,13 +19,13 @@ The Compose file contains the following environment variables:
 - **Username:** postgres (as a default)
 - **Password:** changeme (as a default)
 
-## Access to PgAdmin: 
+## Access to pgAdmin4: 
 - **URL:** `http://localhost:8080`
 - **Username:** pgadmin4@pgadmin.org (as a default)
 - **Password:** admin (as a default)
 
-## Add a new server in PgAdmin:
-- **Host name/address** `postgres`
+## Add a new server in pgAdmin4:
+- **Host name/address** `db`
 - **Port** `5432`
 - **Username** as `POSTGRES_USER`, by default: `postgres`
 - **Password** as `POSTGRES_PASSWORD`, by default `changeme`
