@@ -25,7 +25,7 @@ The Compose file contains the following environment variables:
 - **Password:** admin (as a default)
 
 ## Add a new server in pgAdmin4:
-- **Host name/address** `db`
+- **Host name/address** `postgres`
 - **Port** `5432`
 - **Username** as `POSTGRES_USER`, by default: `postgres`
 - **Password** as `POSTGRES_PASSWORD`, by default `changeme`

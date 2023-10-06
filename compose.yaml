@@ -2,22 +2,22 @@ networks:
   postgres:
     driver: bridge
 volumes:
-    postgres:
+    pgdata:
     pgadmin:
       
 services:
   ############
   # Database #
   ############
-  db:
-    image: postgres:15.0
-    container_name: database
+  postgres:
+    image: postgres:15.4
+    container_name: postgres_container
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
       PGDATA: /data/postgres
     volumes:
-       - postgres:/data/postgres
+       - pgdata:/data/postgres
     ports:
       - "5432:5432"
     networks:
@@ -26,9 +26,10 @@ services:
   ###################
   # Database client #
   ###################
-  db-client:
+  pgadmin:
     image: dpage/pgadmin4
-    container_name: database-client
+    container_name: pgadmin_container
+    user: root
     networks:
       - postgres
     ports:
